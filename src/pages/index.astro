@@ -1,0 +1,39 @@
+---
+import LayoutDefault from "../layouts/default.astro"
+import {AtomicoHello} from "../components/atomico-hello";
+import {AtomicoTime} from "../components/atomico-time";
+import "../components/atomico-brand";
+import { SiteIsotype } from "@atomico/site/site-isotype";
+import { SiteText } from "@atomico/site/site-text/react";
+import { SiteButton } from "@atomico/site/site-button/react";
+import { SiteGrid } from "@atomico/site/site-grid/react";
+---
+
+<LayoutDefault title="Welcome!"> 
+	<SiteIsotype client:idle>
+		<SiteGrid gap={0} centered client:idle>		
+			<SiteText client:idle elegant><h1 style="margin:0">Atomico + @atomico/react</h1></SiteText>	
+			<SiteText client:idle textCenter>
+				<span>
+					Create interfaces with code
+					<br /> simple, fast and light
+				</span>
+			</SiteText>
+			<SiteButton>Atomico.js</SiteButton>	
+		</SiteGrid>
+	</SiteIsotype>	
+	<AtomicoHello message="Astro!">
+		<div class="center">
+			<!--
+			Instantiating the webcomponents through tag-name allows
+			us not to have a conflict with the use of slot
+			 -->
+			<atomico-brand></atomico-brand>	
+			<!--
+			the instance through the constructor 
+			does not allow the use of slot
+			 -->
+			<AtomicoTime client:load></AtomicoTime>	
+		</div>
+	</AtomicoHello>	
+</LayoutDefault>

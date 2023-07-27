@@ -1,0 +1,34 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "meta": {
+    "id": "astro",
+    "title": "Started - Atomico + Astro Build (JS,JSX,TS,TSX)",
+    "description": "Hassle-free starter template, perfect to start creating sites",
+    "branch": "https://github.com/atomicojs/base/tree/5-astro/"
+  },
+  "scripts": {
+    "dev": "astro dev --experimental-integrations",
+    "start": "astro dev --experimental-integrations",
+    "build": "astro build --experimental-integrations",
+    "preview": "astro preview --experimental-integrations",
+    "create:component": "scaffold ./templates/component.md src"
+  },
+  "dependencies": {
+    "@astrojs/react": "^2.2.1",
+    "@atomico/react": "^2.7.9",
+    "@atomico/site": "^0.6.0",
+    "@types/react": "^18.2.17",
+    "@types/react-dom": "^18.2.7",
+    "atomico": "latest",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@atomico/astro": "^0.7.0",
+    "@atomico/scaffold": "^0.3.0",
+    "@atomico/tsconfig": "^1.0.0",
+    "astro": "^2.9.4"
+  }
+}
